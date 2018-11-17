@@ -48,7 +48,7 @@ class CreateAddressModule extends Migration
             $table->string('address_1');
             $table->string('address_2')->nullable();
             $table->string('postal_code')->nullable();
-            $table->string('city')->nullable();
+            $table->string('city');
             $table->string('country_id')->nullable();
             $table->timestamps();
         });
@@ -99,7 +99,7 @@ class CreateAddressModule extends Migration
         $field->name = 'address_1';
         $field->uitype_id = uitype('text')->id;
         $field->displaytype_id = displaytype('everywhere')->id;
-        $field->data = null;
+        $field->data = ['rules' => 'required'];
         $field->sequence = 0;
         $field->block_id = $block->id;
         $field->module_id = $module->id;
@@ -132,7 +132,7 @@ class CreateAddressModule extends Migration
         $field->name = 'city';
         $field->uitype_id = uitype('text')->id;
         $field->displaytype_id = displaytype('everywhere')->id;
-        $field->data = null;
+        $field->data = ['rules' => 'required'];
         $field->sequence = 3;
         $field->block_id = $block->id;
         $field->module_id = $module->id;
@@ -143,7 +143,7 @@ class CreateAddressModule extends Migration
         $field->name = 'country';
         $field->uitype_id = uitype('entity')->id;
         $field->displaytype_id = displaytype('everywhere')->id;
-        $field->data = ['module' => 'country', 'field' => 'name'];
+        $field->data = ['rules' => 'required', 'module' => 'country', 'field' => 'name'];
         $field->sequence = 4;
         $field->block_id = $block->id;
         $field->module_id = $module->id;

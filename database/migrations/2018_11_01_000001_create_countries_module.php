@@ -368,7 +368,7 @@ class CreateCountriesModule extends Migration
         $field->name = 'name';
         $field->uitype_id = uitype('text')->id;
         $field->displaytype_id = displaytype('everywhere')->id;
-        $field->data = null;
+        $field->data = ['rules' => 'required'];
         $field->sequence = 0;
         $field->block_id = $block->id;
         $field->module_id = $module->id;
@@ -379,7 +379,7 @@ class CreateCountriesModule extends Migration
         $field->name = 'code';
         $field->uitype_id = uitype('text')->id;
         $field->displaytype_id = displaytype('everywhere')->id;
-        $field->data = null;
+        $field->data = ['rules' => 'required'];
         $field->sequence = 1;
         $field->block_id = $block->id;
         $field->module_id = $module->id;
@@ -390,7 +390,7 @@ class CreateCountriesModule extends Migration
         $field->name = 'iso_alpha3';
         $field->uitype_id = uitype('text')->id;
         $field->displaytype_id = displaytype('everywhere')->id;
-        $field->data = null;
+        $field->data = ['rules' => 'required'];
         $field->sequence = 2;
         $field->block_id = $block->id;
         $field->module_id = $module->id;
