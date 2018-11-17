@@ -11,7 +11,7 @@ use Uccello\Core\Models\Block;
 use Uccello\Core\Models\Field;
 use Uccello\Core\Models\Filter;
 
-class CreateAddressModule extends Migration
+class CreateCountriesModule extends Migration
 {
     /**
      * Run the migrations.
@@ -328,7 +328,7 @@ class CreateAddressModule extends Migration
         $module = new  Module();
         $module->name = 'country';
         $module->icon = 'terrain';
-        $module->model_class = 'Uccello\Address\Models\Address';
+        $module->model_class = 'Uccello\Address\Models\Country';
         $module->data = ["package" => "address"];
         $module->save();
 
@@ -420,7 +420,7 @@ class CreateAddressModule extends Migration
 
         // Location block
         $block = new Block();
-        $block->label = 'block.general';
+        $block->label = 'block.location';
         $block->icon = 'location_on';
         $block->sequence = 1;
         $block->tab_id = $tab->id;
@@ -475,7 +475,7 @@ class CreateAddressModule extends Migration
         $block = new Block();
         $block->label = 'block.other';
         $block->icon = 'info';
-        $block->sequence = 0;
+        $block->sequence = 2;
         $block->tab_id = $tab->id;
         $block->module_id = $module->id;
         $block->save();
@@ -535,9 +535,9 @@ class CreateAddressModule extends Migration
         $field->module_id = $module->id;
         $field->save();
 
-        // Geocode id
+        // Geoname id
         $field = new Field();
-        $field->name = 'geocode_id';
+        $field->name = 'geoname_id';
         $field->uitype_id = uitype('text')->id;
         $field->displaytype_id = displaytype('everywhere')->id;
         $field->data = null;
@@ -555,7 +555,7 @@ class CreateAddressModule extends Migration
         $filter->user_id = null;
         $filter->name = 'filter.all';
         $filter->type = 'list';
-        $filter->columns = ['name', 'code'];
+        $filter->columns = ['name', 'code', 'iso_alpha3', 'currency_code', 'capital', 'continent_name'];
         $filter->conditions = null;
         $filter->order_by = null;
         $filter->is_default = true;

@@ -20,6 +20,7 @@ class Address extends Model
      */
     public function getRecordLabelAttribute() : string
     {
-        return trim($this->address_1 . ' ' . $this->address_2 . ' - ' . $this->postal_code . ' ' . $this->city);
+        // return trim($this->address_1 . ' ' . $this->address_2 . ' - ' . $this->postal_code . ' ' . $this->city);
+        return trim($this->address_1 . ' ' . $this->city);
     }
 }
