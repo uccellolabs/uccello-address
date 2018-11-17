@@ -60,7 +60,7 @@ class CreateAddressModule extends Migration
         $module->name = 'address';
         $module->icon = 'location_on';
         $module->model_class = 'Uccello\Address\Models\Address';
-        $module->data = ["package" => "address"];
+        $module->data = ["package" => "address", "menu" => false];
         $module->save();
 
         return $module;
