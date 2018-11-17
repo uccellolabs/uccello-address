@@ -1,0 +1,34 @@
+{
+    "name": "uccello/address",
+    "description": "Package allowing to manage addresses with Uccello",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan SARDO",
+            "email": "jonathan@uccellolabs.com"
+        }
+    ],
+    "require": {
+        "uccello/uccello": "^1.0@dev",
+        "uccello/address": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Uccello\\Address\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Uccello\\Address\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Uccello\\Address\\Providers\\AppServiceProvider"
+            ]
+        }
+    }
+}
