@@ -2,7 +2,7 @@
 
 namespace Uccello\Address\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Uccello\Core\Database\Eloquent\Model;
 
 class Country extends Model
 {
