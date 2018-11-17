@@ -1,6 +1,6 @@
 {
     "name": "uccello/address",
-    "description": "Package allowing to manage addresses with Uccello",
+    "description": "Package to manage addresses with Uccello",
     "version": "1.0.0",
     "type": "library",
     "license": "MIT",
@@ -11,8 +11,7 @@
         }
     ],
     "require": {
-        "uccello/uccello": "^1.0@dev",
-        "uccello/address": "^1.0"
+        "uccello/uccello": "^1.0@dev"
     },
     "autoload": {
         "psr-4": {
