@@ -329,7 +329,7 @@ class CreateCountriesModule extends Migration
         $module->name = 'country';
         $module->icon = 'terrain';
         $module->model_class = 'Uccello\Address\Models\Country';
-        $module->data = ["package" => "address"];
+        $module->data = ["package" => "uccello/address"];
         $module->save();
 
         return $module;
