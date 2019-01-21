@@ -163,6 +163,7 @@ class CreateAddressModule extends Migration
         $filter->order_by = null;
         $filter->is_default = true;
         $filter->is_public = false;
+        $filter->data = [ 'readonly' => true ];
         $filter->save();
     }
 }
