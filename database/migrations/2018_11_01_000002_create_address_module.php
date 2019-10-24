@@ -160,7 +160,7 @@ class CreateAddressModule extends Migration
         $filter->type = 'list';
         $filter->columns = ['address_1', 'address_2', 'postal_code', 'city', 'country'];
         $filter->conditions = null;
-        $filter->order_by = null;
+        $filter->order = null;
         $filter->is_default = true;
         $filter->is_public = false;
         $filter->data = [ 'readonly' => true ];

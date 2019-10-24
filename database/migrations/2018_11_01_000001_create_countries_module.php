@@ -557,7 +557,7 @@ class CreateCountriesModule extends Migration
         $filter->type = 'list';
         $filter->columns = ['name', 'code', 'iso_alpha3', 'currency_code', 'capital', 'continent_name'];
         $filter->conditions = null;
-        $filter->order_by = null;
+        $filter->order = null;
         $filter->is_default = true;
         $filter->is_public = false;
         $filter->data = [ 'readonly' => true ];
