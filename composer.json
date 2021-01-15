@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "uccello/uccello": "^1.0@dev"
+        "uccello/uccello": "1.*"
     },
     "autoload": {
         "psr-4": {
